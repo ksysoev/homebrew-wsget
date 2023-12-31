@@ -5,20 +5,20 @@
 class Wsget < Formula
   desc "wsget binary"
   homepage "https://gihub.com/ksysoev/wsget"
-  version "0.3.2"
+  version "0.4.0"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/ksysoev/wsget/releases/download/v0.3.2/wsget_Darwin_arm64.tar.gz"
-      sha256 "9f227b738cc0e4228b1bb1f66643fdb185e12eae89890efa1f5188721a710c3f"
+      url "https://github.com/ksysoev/wsget/releases/download/v0.4.0/wsget_Darwin_arm64.tar.gz"
+      sha256 "0692dd84f7f6efc1a8dda4adbd92d296d7393347451f39e8c6317689baaa903d"
 
       def install
         bin.install 'wsget'
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/ksysoev/wsget/releases/download/v0.3.2/wsget_Darwin_x86_64.tar.gz"
-      sha256 "4084c111b0f1c127191f77b30f7e9f8fe4d497326380bbf081aa36379013c4d7"
+      url "https://github.com/ksysoev/wsget/releases/download/v0.4.0/wsget_Darwin_x86_64.tar.gz"
+      sha256 "e8ee1542f8cb276d6d49f9e92fc2931b77758df41e0b1ad757ff3c6a7bcd0daa"
 
       def install
         bin.install 'wsget'
@@ -28,16 +28,16 @@ class Wsget < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/ksysoev/wsget/releases/download/v0.3.2/wsget_Linux_arm64.tar.gz"
-      sha256 "ec5cf8115013e4df9fe38d207f4cba37d17f7eee93f6a4f62ffaac28144e0f13"
+      url "https://github.com/ksysoev/wsget/releases/download/v0.4.0/wsget_Linux_arm64.tar.gz"
+      sha256 "8395b4d0f6d84c00ff878d539991519f888f43b830458463d8151465157762c9"
 
       def install
         bin.install 'wsget'
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/ksysoev/wsget/releases/download/v0.3.2/wsget_Linux_x86_64.tar.gz"
-      sha256 "70f6bd4bf8eba3c8731dc6b204744ff2afa323af5e3dc55153decd098e03c24d"
+      url "https://github.com/ksysoev/wsget/releases/download/v0.4.0/wsget_Linux_x86_64.tar.gz"
+      sha256 "24f7e02c72936e9dc03f5e164618cb688a1151fbe3fc5f70bf77fbcee1cc992e"
 
       def install
         bin.install 'wsget'
