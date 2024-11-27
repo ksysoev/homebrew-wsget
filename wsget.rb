@@ -5,20 +5,20 @@
 class Wsget < Formula
   desc "wsget binary"
   homepage "https://gihub.com/ksysoev/wsget"
-  version "0.4.2"
+  version "0.5.0"
 
   on_macos do
     on_intel do
-      url "https://github.com/ksysoev/wsget/releases/download/v0.4.2/wsget_Darwin_x86_64.tar.gz"
-      sha256 "36e8c2810fe3bdabbc29a88b7a40e40a3a9193d8db66a490d7a1480b96cb8b10"
+      url "https://github.com/ksysoev/wsget/releases/download/v0.5.0/wsget_Darwin_x86_64.tar.gz"
+      sha256 "cfcc587610a4ee02aaf76435bd80c8cf7eaa55500b027575f609f1866b37b1d9"
 
       def install
         bin.install 'wsget'
       end
     end
     on_arm do
-      url "https://github.com/ksysoev/wsget/releases/download/v0.4.2/wsget_Darwin_arm64.tar.gz"
-      sha256 "dc56d5edab3043beef3f66e0a7f2449cc8c803a966c74eaf9996f8f86b6cedb1"
+      url "https://github.com/ksysoev/wsget/releases/download/v0.5.0/wsget_Darwin_arm64.tar.gz"
+      sha256 "bc1266cb6138cdb48d753d7322e3abf0c8ed07dfb4810837ba090dc0e2120d4c"
 
       def install
         bin.install 'wsget'
@@ -29,8 +29,8 @@ class Wsget < Formula
   on_linux do
     on_intel do
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/ksysoev/wsget/releases/download/v0.4.2/wsget_Linux_x86_64.tar.gz"
-        sha256 "576904cb1af125834f9752cce9eb0a30140c95d59e721547bf489792d0c1d243"
+        url "https://github.com/ksysoev/wsget/releases/download/v0.5.0/wsget_Linux_x86_64.tar.gz"
+        sha256 "92c828312c298e150e27e6191dda9454d11c2052b60b797a6c824af3ed3ed896"
 
         def install
           bin.install 'wsget'
@@ -39,8 +39,8 @@ class Wsget < Formula
     end
     on_arm do
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/ksysoev/wsget/releases/download/v0.4.2/wsget_Linux_arm64.tar.gz"
-        sha256 "1b88f036ee88f3fd57ae213cc481cd535bf6d08667e1037a24b2c5ebdcd03e5d"
+        url "https://github.com/ksysoev/wsget/releases/download/v0.5.0/wsget_Linux_arm64.tar.gz"
+        sha256 "e2bcef76120bbebe5ee0d84734866c01abe82107f975ab2c16cc3ac7d2abe80d"
 
         def install
           bin.install 'wsget'
