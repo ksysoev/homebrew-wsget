@@ -5,20 +5,20 @@
 class Wsget < Formula
   desc "wsget binary"
   homepage "https://gihub.com/ksysoev/wsget"
-  version "0.7.1"
+  version "0.7.2"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/ksysoev/wsget/releases/download/v0.7.1/wsget_Darwin_x86_64.tar.gz"
-      sha256 "8be21153d82a0a4ee770e0032d2be99c12cebba84abb94a6ae21a5fbfdda6b00"
+      url "https://github.com/ksysoev/wsget/releases/download/v0.7.2/wsget_Darwin_x86_64.tar.gz"
+      sha256 "30e71878a69d72f6d67a69d4c572f58fcb2555a226d956f6f3d795de8153368c"
 
       def install
         bin.install 'wsget'
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/ksysoev/wsget/releases/download/v0.7.1/wsget_Darwin_arm64.tar.gz"
-      sha256 "dfa5d3006c5dfda63e955a3481c72ecd11ea75e02534d3b99efbf95584587364"
+      url "https://github.com/ksysoev/wsget/releases/download/v0.7.2/wsget_Darwin_arm64.tar.gz"
+      sha256 "0bf8e643d6acd92ad8b802117ebbf355c8cb77e21548bee6f21498d95c906bec"
 
       def install
         bin.install 'wsget'
@@ -27,24 +27,18 @@ class Wsget < Formula
   end
 
   on_linux do
-    if Hardware::CPU.intel?
-      if Hardware::CPU.is_64_bit?
-        url "https://github.com/ksysoev/wsget/releases/download/v0.7.1/wsget_Linux_x86_64.tar.gz"
-        sha256 "d382f995799973995e63d7d8e5716d6f89089006da0d445e98e7655643b50486"
-
-        def install
-          bin.install 'wsget'
-        end
+    if Hardware::CPU.intel? and Hardware::CPU.is_64_bit?
+      url "https://github.com/ksysoev/wsget/releases/download/v0.7.2/wsget_Linux_x86_64.tar.gz"
+      sha256 "85d6426edb3642102c999107b7e45b4f79fb82d83f7b8e807a54eb45e65c44a7"
+      def install
+        bin.install 'wsget'
       end
     end
-    if Hardware::CPU.arm?
-      if Hardware::CPU.is_64_bit?
-        url "https://github.com/ksysoev/wsget/releases/download/v0.7.1/wsget_Linux_arm64.tar.gz"
-        sha256 "e8d5a9a4a9123d5611793e535e6c11af19854f6a91fd40ab68f54242d4500e3c"
-
-        def install
-          bin.install 'wsget'
-        end
+    if Hardware::CPU.arm? and Hardware::CPU.is_64_bit?
+      url "https://github.com/ksysoev/wsget/releases/download/v0.7.2/wsget_Linux_arm64.tar.gz"
+      sha256 "1711a1524f58e459409e2ca56e097a7b2fa87bfedb56cf9b92616d6f854de5ec"
+      def install
+        bin.install 'wsget'
       end
     end
   end
