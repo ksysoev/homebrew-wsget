@@ -5,20 +5,20 @@
 class Wsget < Formula
   desc "wsget binary"
   homepage "https://gihub.com/ksysoev/wsget"
-  version "0.7.2"
+  version "0.7.3"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/ksysoev/wsget/releases/download/v0.7.2/wsget_Darwin_x86_64.tar.gz"
-      sha256 "30e71878a69d72f6d67a69d4c572f58fcb2555a226d956f6f3d795de8153368c"
+      url "https://github.com/ksysoev/wsget/releases/download/v0.7.3/wsget_Darwin_x86_64.tar.gz"
+      sha256 "4f6e52c151852674aa82658267b65b108b8ba88a61fee1cb48665537e454afcf"
 
       def install
         bin.install 'wsget'
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/ksysoev/wsget/releases/download/v0.7.2/wsget_Darwin_arm64.tar.gz"
-      sha256 "0bf8e643d6acd92ad8b802117ebbf355c8cb77e21548bee6f21498d95c906bec"
+      url "https://github.com/ksysoev/wsget/releases/download/v0.7.3/wsget_Darwin_arm64.tar.gz"
+      sha256 "31c49697916ba10a4dff186c322a51c7c4026686f1811cd1f1c30c90fb4bf633"
 
       def install
         bin.install 'wsget'
@@ -27,16 +27,16 @@ class Wsget < Formula
   end
 
   on_linux do
-    if Hardware::CPU.intel? and Hardware::CPU.is_64_bit?
-      url "https://github.com/ksysoev/wsget/releases/download/v0.7.2/wsget_Linux_x86_64.tar.gz"
-      sha256 "85d6426edb3642102c999107b7e45b4f79fb82d83f7b8e807a54eb45e65c44a7"
+    if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
+      url "https://github.com/ksysoev/wsget/releases/download/v0.7.3/wsget_Linux_x86_64.tar.gz"
+      sha256 "d73f6187bafdd0d9424aa7afdafe0e183f3ae5cebcd76c962a19c58bb2d4d207"
       def install
         bin.install 'wsget'
       end
     end
-    if Hardware::CPU.arm? and Hardware::CPU.is_64_bit?
-      url "https://github.com/ksysoev/wsget/releases/download/v0.7.2/wsget_Linux_arm64.tar.gz"
-      sha256 "1711a1524f58e459409e2ca56e097a7b2fa87bfedb56cf9b92616d6f854de5ec"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/ksysoev/wsget/releases/download/v0.7.3/wsget_Linux_arm64.tar.gz"
+      sha256 "2470c5bc0ce12f3d459c1b800e5f3a7a38a0da3a57e07d17cbddc343fa1bc591"
       def install
         bin.install 'wsget'
       end
