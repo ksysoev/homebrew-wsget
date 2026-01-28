@@ -5,20 +5,20 @@
 class Wsget < Formula
   desc "wsget binary"
   homepage "https://gihub.com/ksysoev/wsget"
-  version "0.7.3"
+  version "0.8.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/ksysoev/wsget/releases/download/v0.7.3/wsget_Darwin_x86_64.tar.gz"
-      sha256 "4f6e52c151852674aa82658267b65b108b8ba88a61fee1cb48665537e454afcf"
+      url "https://github.com/ksysoev/wsget/releases/download/v0.8.0/wsget_Darwin_x86_64.tar.gz"
+      sha256 "6a4434b315419bb716498a389d73aa41cb90c6befe7af0f21a01a0fd175c376e"
 
       def install
         bin.install 'wsget'
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/ksysoev/wsget/releases/download/v0.7.3/wsget_Darwin_arm64.tar.gz"
-      sha256 "31c49697916ba10a4dff186c322a51c7c4026686f1811cd1f1c30c90fb4bf633"
+      url "https://github.com/ksysoev/wsget/releases/download/v0.8.0/wsget_Darwin_arm64.tar.gz"
+      sha256 "684d6cadb2747cfaabd8b991583e6c349c7aff88b6ae185f6d8b5aaadd2cbe23"
 
       def install
         bin.install 'wsget'
@@ -28,15 +28,15 @@ class Wsget < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/ksysoev/wsget/releases/download/v0.7.3/wsget_Linux_x86_64.tar.gz"
-      sha256 "d73f6187bafdd0d9424aa7afdafe0e183f3ae5cebcd76c962a19c58bb2d4d207"
+      url "https://github.com/ksysoev/wsget/releases/download/v0.8.0/wsget_Linux_x86_64.tar.gz"
+      sha256 "c83b20b9e5843a1d82c525f915b4be78bb40111fe5d8c4aa0e64830c8653ae15"
       def install
         bin.install 'wsget'
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/ksysoev/wsget/releases/download/v0.7.3/wsget_Linux_arm64.tar.gz"
-      sha256 "2470c5bc0ce12f3d459c1b800e5f3a7a38a0da3a57e07d17cbddc343fa1bc591"
+      url "https://github.com/ksysoev/wsget/releases/download/v0.8.0/wsget_Linux_arm64.tar.gz"
+      sha256 "8e4db3851e334a2e571b9320fa2e8e13de11b97752e9035fb7bec43a371e92ff"
       def install
         bin.install 'wsget'
       end
