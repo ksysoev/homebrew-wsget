@@ -5,22 +5,22 @@
 class Wsget < Formula
   desc "wsget binary"
   homepage "https://gihub.com/ksysoev/wsget"
-  version "0.8.0"
+  version "0.9.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/ksysoev/wsget/releases/download/v0.8.0/wsget_Darwin_x86_64.tar.gz"
-      sha256 "6a4434b315419bb716498a389d73aa41cb90c6befe7af0f21a01a0fd175c376e"
+      url "https://github.com/ksysoev/wsget/releases/download/v0.9.0/wsget_Darwin_x86_64.tar.gz"
+      sha256 "ec1cbf9324cfda84666ce0aab19702f7ca03d73a283076030a3f8a0650c2d465"
 
-      def install
+      define_method(:install) do
         bin.install 'wsget'
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/ksysoev/wsget/releases/download/v0.8.0/wsget_Darwin_arm64.tar.gz"
-      sha256 "684d6cadb2747cfaabd8b991583e6c349c7aff88b6ae185f6d8b5aaadd2cbe23"
+      url "https://github.com/ksysoev/wsget/releases/download/v0.9.0/wsget_Darwin_arm64.tar.gz"
+      sha256 "72d39bd967d8ec5e6cfbf3a8b22a0117b9bcf4b71e6a50a24cf1abe3a328b309"
 
-      def install
+      define_method(:install) do
         bin.install 'wsget'
       end
     end
@@ -28,16 +28,16 @@ class Wsget < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/ksysoev/wsget/releases/download/v0.8.0/wsget_Linux_x86_64.tar.gz"
-      sha256 "c83b20b9e5843a1d82c525f915b4be78bb40111fe5d8c4aa0e64830c8653ae15"
-      def install
+      url "https://github.com/ksysoev/wsget/releases/download/v0.9.0/wsget_Linux_x86_64.tar.gz"
+      sha256 "d64f6794835b06bef5bdee32397a4ffbf05c116f411a5459b12a43ab6a7b16d9"
+      define_method(:install) do
         bin.install 'wsget'
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/ksysoev/wsget/releases/download/v0.8.0/wsget_Linux_arm64.tar.gz"
-      sha256 "8e4db3851e334a2e571b9320fa2e8e13de11b97752e9035fb7bec43a371e92ff"
-      def install
+      url "https://github.com/ksysoev/wsget/releases/download/v0.9.0/wsget_Linux_arm64.tar.gz"
+      sha256 "0c0ada4fb0797ba572b3e91d0c32f6ea5929faf8cc3e5c4760134e28aecf6d99"
+      define_method(:install) do
         bin.install 'wsget'
       end
     end
